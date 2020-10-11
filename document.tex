@@ -1,0 +1,115 @@
+\documentclass{beamer}
+\usepackage[ngerman]{babel} % deutsches Sprachpaket wird geladen
+%\usepackage[english]{babel}% englisches Sprachpaket wird geladen
+\usepackage[T1]{fontenc} % westeuropäische Codierung wird verlangt
+\usepackage[utf8]{inputenc} % Umlaute werden erlaubt
+\usepackage{graphicx} % Graphiken und Bilder können eingebunden werden
+\usepackage{color}  % Erlaubt die Benutzung der Namen im Farbpaket und deren Änderung
+\usepackage{amsmath} % Erweiterung für den Mathe-Satz
+\usepackage{amssymb} % alle Zeichen aus msam und msmb werden dargestellt
+\usepackage{enumerate} % erlaubt Nummerierungen 
+\usepackage{url} % Dient zur Auszeichnung von URLs; setzt die Adresse in Schreibmaschinenschrift.
+\usepackage[center]{caption}  % Bildunterschrift wird zentriert
+\usepackage{subfigure} % mehrere Bilder können in einer fugure-Umgebung verwendet werden
+\usepackage{longtable} % Diese Umgebung ist ähnlich definiert wie die tabular-Umgebung, erlaubt jedoch mehrseitige Tabellen.
+\usepackage{paralist} % Modifikation der bereits bestehenden Listenumgebungen
+\usepackage{lmodern}% Für die Schrift
+\usepackage{amsthm} % erlaubt die Benutzung von eigenen Theoremen
+\usepackage{hyperref} % Links und Verweise werden innerhalb von PDF Dokumenten erzeugt
+\usepackage{wrapfig} % Das Paket ermöglicht es von Schrift umflossene Bilder und Tabellen einzufügen.
+\numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
+\usepackage{latexsym} % LaTeX-Symbole werden geladen
+\usepackage{tikz} % Erlaubt es mit tikz zu zeichnen
+\usepackage{tabularx} % Erlaubt Tabellen 
+\usepackage{algorithm} % Erlaubt Pseudocode
+\usepackage{color} % Farbpaket wird geladen
+\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
+
+% Hier werden neue Theorems erstellt.
+\theoremstyle{definition}
+\newtheorem{theorem1}[equation]{Theorem}
+\newtheorem{voraussetzung}[equation]{Voraussetzung}
+\newtheorem{rem}[equation]{Bemerkung}
+\newtheorem{example1}[equation]{Beispiel}
+\newtheorem{definition1}[equation]{Definition}
+\newtheorem{lemma1}[equation]{Lemma}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{kor}[equation]{Korollar}
+\newtheorem{alg}[equation]{Algorithm}
+\newtheorem*{rem2}{Bemerkung}
+\newtheorem*{Beweis1}{Beweis des Satzes \ref{Prop}}
+\newtheorem{satz}[equation]{Satz} 
+\newtheorem{satz2}[equation]{Hilfssatz} 
+\newtheorem{satz3}[equation]{Hauptsatz} 
+\newtheorem{Folgerung1}[equation]{Folgerung} 
+\newtheorem{forderung}[equation]{Forderung}
+
+% Hier werden neue Math-Symbole erstellt
+\DeclareMathOperator*{\esssup}{ess\,sup} % essentiellen Supremums
+\DeclareMathOperator{\spn}{span} % Span
+\DeclareMathOperator{\supp}{supp} % Träger
+
+%Hier werden verschiedene Farben erstellt
+\definecolor{matnat}{RGB}{0,130,198}
+\definecolor{matnat{light}}{RGB}{30,160,228}
+\definecolor{light}{HTML}{F7F8FF}
+\setbeamercolor{footlinecolor}{bg=white} %Hier wird definiert, dass die Fußzeile die Farbe weiß haben soll.
+\setbeamercolor{background canvas}{bg=light} %Hier wird die Hintergrundfarbe definiert
+\setbeamercolor{title}{fg=red} %Hier wird festgelegt, dass die Titelfarbe rot sein soll.
+\setbeamercolor{subtitle}{fg=blue} %Hier wird definiert, dass die Untertitelfarbe blau sein soll
+
+%Hier wird die Fußzeile generiert
+\setbeamertemplate{footline}{
+\leavevmode%
+  \hbox{%
+  % Hier wird das Mat-Nat-Siegel eingefügt
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=10.25ex,dp=1ex,center]{footlinecolor}%
+\hspace*{0.4cm } \includegraphics[scale=0.1]{siegel}
+  \end{beamercolorbox}%
+  %Hier wird Titel, Abschnitt und Name eingefügt
+  \begin{beamercolorbox}[wd=0.6\paperwidth,ht=10.25ex,dp=1ex,center]{footlinecolor}%
+\parbox{\paperwidth}{\hspace*{.5cm}\textcolor{matnat}{\inserttitle \hspace*{2cm} \insertsection}  \\[0.13cm] \hspace*{0.44 cm} \textcolor{matnat}{\insertshortauthor} \vspace{0.8cm} }
+  \end{beamercolorbox}%
+  %Hier wird das Uni-Logo eingefügt
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=10.25ex,dp=1ex,right]{footlinecolor}%
+   \includegraphics[scale=0.4]{uni} \hspace*{1cm}
+  \end{beamercolorbox}
+  }%
+ 
+}
+
+\begin{document}
+%Die Beamer-Klasse besitzt ein spezielles Menü, welches hier ausgeschaltet wird.
+\usenavigationsymbolstemplate{}
+\title{Beamer Präsentation der EDV-Mathematik} %Titel
+\subtitle{Wie erstellt man eine richtige Beamer-Präsentation} %Untertitel
+\author{EDV-Mathematik}  %Author
+\date{\today} %Datum
+
+\frame{\titlepage} %Titelseite wird generiert
+
+\frame{\tableofcontents} %Inhaltsverzeichnis wird generiert
+\section{Einleitung} %Section ist wichtig, damit dieser Abschnitt auch im Inhaltsverzeichnis auftaucht
+\begin{frame}{Einleitung} %jede Folie wird durch ein frame dargestellt.
+Hier könnte Ihre Einleitung stehen.
+\end{frame}
+
+\section{Abschnitt 1}
+\begin{frame}{Der Titel kann anders sein} %Der titel muss nicht unbedingt dem section-Titel übereinstimmen
+Hier steht der Inhalt Ihres ersten Abschnittes
+\end{frame}
+%Ein Literaturverzeichnis wird hier erstellt
+\section{Literatur}
+\begin{frame}{Literatur}
+\begin{thebibliography}{999}
+\vspace{2.mm}
+%\itemsep-1mm
+	\bibitem[Abkürzung]{Label} Name, {\sl  Erscheinungsort/Verlag, Jahr}  
+		\vspace*{0.4cm}
+		
+				
+\end{thebibliography}
+
+\end{frame}
+
+\end{document}

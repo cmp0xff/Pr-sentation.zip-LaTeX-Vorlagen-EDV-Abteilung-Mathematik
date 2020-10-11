@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
+\beamer@sectionintoc {2}{Abschnitt 1}{4}{0}{2}
+\beamer@sectionintoc {3}{Literatur}{5}{0}{3}
